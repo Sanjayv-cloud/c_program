@@ -9,8 +9,9 @@
 // }
 
 #include<stdio.h>
+// sum of array
 int arr_sum(int arr[],int space){
-int sum;
+int sum=0;
 
 for(int *i =arr;i<=arr+space-1;i++){
     sum+=*i;
@@ -22,13 +23,24 @@ int main() {
     printf("enter the space:");
     scanf("%d",&space);
     int arr[space];
-    printf("enter the array no:\n");
+    printf("\nenter the array no:");
     for(int i = 0;i<space;i++){
 
         scanf("%d",&arr[i]);
         
     }
-    
+      // printing array
+      for(int *p = arr;p<=arr+space-1;p++){
+        printf("\t%d",*(p));
+      }printf("\n");
+      
+      
+      // reverse order 
+
+    for(int *q = arr+space-1;q>=arr;q--){
+        printf("\t%d",*q);
+    }printf("\n");
+  
     printf("\narray sum is %d",arr_sum(arr,space));
     return 0;
 }
