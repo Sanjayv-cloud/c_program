@@ -8,7 +8,7 @@ while (binary!=0)
 {
     rem = binary%10;
     decimal += weight*rem;
-    weight = weight*8;
+    weight = weight*2;
     binary /=10;
 }
 printf("binary to decimal is : %d\n",decimal);
