@@ -10,7 +10,7 @@ int main(){
 
     for(i=2;i<=square;i++){
 
-        if (square%i==0){
+        if (n%i==0){
         count = 1;
         break;}
         
