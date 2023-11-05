@@ -15,27 +15,27 @@ void addbook(struct book inventory[], int *count) // adding new book to inventor
     struct book newbook;
     if (*count < 100) // limit for the inventory
     {
-        printf("Enter the title of book:\n");
+        printf("Enter the title of book:");
+        getchar();
         fgets(newbook.title, 50, stdin);
-        getchar();
         newbook.title[strcspn(newbook.title, "\n")] = '\0'; // remove new line char
-
-        printf("Enter the author of book:\n");
-        fgets(newbook.author, 50, stdin);
+        
+        printf("\nEnter the author of book:");
         getchar();
+        fgets(newbook.author, 50, stdin);
         newbook.author[strcspn(newbook.author, "\n")] = '\0'; // remove new line char
 
-        printf("Enter the isbn of book:\n");
-        fgets(newbook.isbn, 50, stdin);
+        printf("\nEnter the isbn of book:");
         getchar();
+        fgets(newbook.isbn, 50, stdin);
         newbook.isbn[strcspn(newbook.isbn, "\n")] = '\0'; // remove new line char
 
-        printf("enter the price of the book\n");
+        printf("\nenter the price of the book");
         scanf("%f", &newbook.price);
         inventory[*count] = newbook;
         (*count)++;
 
-        printf("Book added to inventory successfull\n");
+        printf("\nBook added to inventory successfull");
     }
     else
         printf("something went wrong");
@@ -70,16 +70,16 @@ void searchBook(struct book inventory[], int count, char isbnToSearch[])
     }
     printf("Book with ISBN %s not found in the inventory.\n", isbnToSearch);
 }
-int main()
-{
-    struct book inventory[100];
-    int count = 0;
-    while (1)
+int main()           
+{           
+    struct book inventory[100];           
+    int count = 0;           
+    while (1)           
     {
-        pri("[1] add new book");
-        pri("[2] delete a book");
-        pri("[3] search the book");
-        pri("[4] exist");
+        printf("[1] add new book\n");           
+        printf("[2] delete a book\n");           
+        printf("[3] search the book\n");           
+        printf("[4] exist\n");
 
         printf("enter your choice:");
         int choice;

@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
     FILE *fb;
-    fb = fopen("textfile.txt","r");
+    fb = fopen("/home/gaming/sna","r");
     if(fb == NULL){
         printf("the file does not exist");
     }
