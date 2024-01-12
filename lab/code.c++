@@ -1,140 +1,6 @@
-1)) #include<iostream>
-using namespace std;
-int main()
-{
-float item1,item2,discount;
-float total_amount,discount_price,amount_saved;
-cin>>item1>>item2>>discount;
-total_amount=item1+item2;
-amount_saved = (total_amount)*(discount/100);
-discount_price = (total_amount-amount_saved);
-cout<<"Total Amount: "<<total_amount<<endl;
-cout<<"Discount Price: "<<discount_price<<endl;
-cout<<"Amount Saved: "<<amount_saved;
-return 0;
-}
+1))  Nurikabe puzzle
 
-
---------------------------------------------------------------
-
-2)) #include <iostream>
-int main() {
-int marks;
-std::cin >> marks;
-if (marks > 100 || marks < 0) {
-std::cout << "Invalid marks. Please enter a valid score between 0 and 100.";
-} else {
-if (marks >= 95) {
-std::cout << "Student Grade: A Grade\n";
-} else if (marks >= 80) {
-std::cout << "Student Grade: B Grade\n";
-} else if (marks >= 60) {
-std::cout << "Student Grade: C Grade\n";
-} else if (marks >= 50) {
-std::cout << "Student Grade: Just Pass\n";
-} else {
-std::cout << "Student Grade: Fail\n";
-}
-}
-return 0;
-}
-
---------------------------------------------------------------------
-
-3)) #include <iostream>
-// Abstract base class Shape
-class Shape {
-public:
-virtual float calculateArea() const = 0;
-virtual void display() const = 0;
-virtual ~Shape() {}
-};
-// Derived class Circle
-class Circle : public Shape {
-private:
-float radius;
-public:
-Circle(float r) : radius(r) {}
-float calculateArea() const override {
-return 3.14159f * radius * radius;
-}
-void display() const override {
-std::cout << "Circle Area: " << calculateArea() << std::endl;
-}
-};
-// Derived class Rectangle
-class Rectangle : public Shape {
-private:
-float length, width;
-public:
-Rectangle(float l, float w) : length(l), width(w) {}
-float calculateArea() const override {
-return length * width;
-}
-void display() const override {
-std::cout << "Rectangle Area: " << calculateArea() << std::endl;
-}
-};
-class Triangle : public Shape {
-private:
-float base, height;
-public:
-Triangle(float b, float h) : base(b), height(h) {}
-float calculateArea() const override {
-return 0.5f * base * height;
-}
-void display() const override {
-std::cout << "Triangle Area: " << calculateArea() << std::endl;
-}
-};
-int main() {
-float radius, length, width, base, height;
-
-std::cin >> radius;
-Circle circle(radius);
-std::cin >> length >> width;
-Rectangle rectangle(length, width);
-std::cin >> base >> height;
-Triangle triangle(base, height);
-Shape* shapes[3] = {&circle, &rectangle, &triangle};
-for (int i = 0; i < 3; ++i) {
-shapes[i]->display();
-}
-return 0;
-}
-
-
---------------------------------------------------------------
-
-4)) #include <iostream>
-int calculateSum(int N) {
-int sum = 0;
-for (int i = 1; i <= N; i++) {
-sum += i;
-}
-return sum;
-}
-int main() {
-int N;
-std::cin >> N;
-int result = calculateSum(N);
-std::cout << "The sum of all numbers from 1 to " << N << " is: " << result;
-return 0;
-}
-
------------------------------------------------------------------
-5)) #include<iostream>
-using namespace std;
-int main(){
-string a,b,c;
-getline(cin,a);
-getline(cin,b);
-cout << "Letter Count: " << b.length();
-}
-
--------------------------------------------
-
-6) #include<iostream>
+#include<iostream>
 using namespace std;
 int main(){
 int n,max=0;
@@ -151,12 +17,11 @@ max = arr[i][j];
 }
 }
 cout << max;
-
 }
+-----------------------------
+2)) calender event
 
-------------------------------------------------------
-
-7)) #include<iostream>
+#include<iostream>
 using namespace std;
 class calender
 {
@@ -190,79 +55,10 @@ getline(cin,s);
 calender cal(a,b,c,d,e,s);
 cal.myfunc();
 }
+------------------------------
+3)) accounts employee salary
 
------------------------------------------------------------
-
-8)) #include <iostream>
-using namespace std;
-void swapUsingPointers(int* ptr1, int* ptr2) {
-int temp = *ptr1;
-*ptr1 = *ptr2;
-*ptr2 = temp;
-}
-int main() {
-int num1, num2;
-cin >> num1;
-cin >> num2;
-cout << "Before swapping:" << endl;
-cout << "First number: " << num1 << endl;
-cout << "Second number: " << num2 << endl;
-swapUsingPointers(&num1, &num2);
-cout << "After swapping:" << endl;
-cout << "First number: " << num1 << endl;
-cout << "Second number: " << num2 << endl;
-return 0;
-}
-
----------------------------------------------------------
-
-9)) #include <iostream>
-#include <string>
-int main() {
-std::string input;
-
-std::cin >> input;
-bool isPalindrome = true;
-for (int i = 0; i < input.length() / 2; i++) {
-if (input[i] != input[input.length() - i - 1]) {
-isPalindrome = false;
-break;
-}}
-if (isPalindrome) {
-std::cout << "The string is a palindrome" << std::endl;
-} else {
-std::cout << "The string is not a palindrome" << std::endl;
-}
-return 0;
-}
-
-------------------------------------------------------------------
-
-10)) #include<iostream>
-using namespace std;
-int findPos(int pos)
-{
-static int x=1;
-x=x*2;
-if(pos>x)
-{
-return findPos(pos);
-}
-if(pos==x){return x;}
-return x/2;
-}
-int main()
-{
-int num;
-cin>>num;
-cout<<findPos(num);
-
-return 0;
-}
-
------------------------------------------------------------
-
-11)) #include <iostream>
+#include <iostream>
 using namespace std;
 class Accounts {
 private:
@@ -298,9 +94,10 @@ acc.display();
 return 0;
 }
 
-------------------------------------------------------------
+-------------------------------------
+4) sum and difference
 
-12)) #include<iostream>
+#include<iostream>
 using namespace std;
 class myClass{
 private:
@@ -331,10 +128,10 @@ diff = obj1 - obj2;
 cout << "Sum = " << sum<<"\n";
 cout << "Difference = " << diff;
 }
+--------------------------------------------
+5)) toy cars
 
---------------------------------------------------------------
-
-13)) #include <iostream>
+#include <iostream>
 class ToyCar {
 private:
 int wheels;
@@ -363,10 +160,10 @@ ToyCar car(w, b, f);
 std::cout << "Max cars that can be built: " << car.maxCars() << std::endl;
 return 0;
 }
+-----------------------------------
+6) floatpair
 
------------------------------------------------------------------------
-
-14)) #include <iostream>
+#include <iostream>
 class FloatPair {
 private:
 float x;
@@ -387,10 +184,10 @@ float result = product(obj1, obj2);
 std::cout << "Product of the private attributes of the two objects: " << result << std::endl;
 return 0;
 }
+---------------------------
+7)) parent chlid1 and child2
 
-------------------------------------------------------------------
-
-15)) #include <iostream>
+#include <iostream>
 class Parent {
 public:
 Parent(int a, int b) : a(a), b(b) {}
@@ -426,10 +223,10 @@ ob1.sub();
 ob2.mul();
 return 0;
 }
+-----------------------------------------
+8)) magic square
 
-----------------------------------------------------------------
-
-16)) #include<iostream>
+ #include<iostream>
 using namespace std;
 int main(){
 int n;
@@ -451,7 +248,6 @@ tot += arr[i][j];
 }
 }
 
-//Row check
 for(int i=0;i<n;i++){
 int row = 0;
 for(int j=0;j<n;j++){
@@ -462,7 +258,7 @@ break;
 }
 }
 
-//Col check
+
 for(int i=0;i<n;i++){
 int row = 0;
 for(int j=0;j<n;j++){
@@ -473,7 +269,6 @@ break;
 }
 }
 
-// diagnoal check
 int row = 0;
 for(int i=0;i<n;i++){
 for(int j=0;j<n;j++){
@@ -492,10 +287,318 @@ else{
 cout << "The matrix is not a magic square.";
 }
 }
+----------------------
+9)) numerator and denominator
 
+#include<iostream>
+#include<stdexcept>
+using namespace std;
+int main(){
+    try{
+        int numerator,denominator;
+        cin >> numerator; cin >> denominator;
+        cin>>numerator>>denominator;
+        if(denominator==0){
+            throw "Division by zero is not allowed.";
+        }
+        else
+        {
+        int c=numerator/denominator;
+        cout<<"Result of division: "<<c<<endl;
+        }
+    }
+    catch(const char* e){
+        cout<<"Error: "<<e<<endl;
+    }
+    cout<<"Program finished execution."<<endl;
+}
+
+---------------------------------
+10)) positive integer stored in vector
+
+ #include<iostream>
+#include <vector>
+int main () {
+std::vector<int> numbers;
+int num;
+while (true) {
+std::cin >> num;
+if (num < 0) {
+break;
+}
+numbers.push_back(num);
+}
+if (!numbers.empty()) {
+int sum = 0;
+for (int n : numbers) {
+sum += n;
+}
+double average = static_cast<double>(sum) / numbers.size();
+std::cout << "Sum: " << sum << std::endl;
+std::cout << "Average: " << average << std::endl;
+} else {
+std::cout << "No positive integers entered." << std::endl;
+}
+return 0;
+}
+---------------------------------------------
+11)) generic function
+
+#include <iostream>
+#include <vector>
+template <typename Iterator>
+int accumulate(Iterator begin, Iterator end) {
+using ValueType = typename std::iterator_traits<Iterator>::value_type;
+ValueType sum = ValueType(); // Initialize sum with the default value
+for (Iterator it = begin; it != end; ++it) {
+sum += *it;
+}
+return sum;
+}
+int main() {
+int n;
+std::cin >> n;
+std::vector<int> vec(n);
+for (int i = 0; i < n; ++i) {
+std::cin >> vec[i];
+}
+auto sum = accumulate(vec.begin(), vec.end());
+std::cout << "Accumulated sum: " << sum << std::endl;
+return 0;
+}
+---------------------------------------
+12))  savings, discount offers
+
+ #include<iostream>
+using namespace std;
+int main()
+{
+float item1,item2,discount;
+float total_amount,discount_price,amount_saved;
+cin>>item1>>item2>>discount;
+total_amount=item1+item2;
+amount_saved = (total_amount)*(discount/100);
+discount_price = (total_amount-amount_saved);
+cout<<"Total Amount: "<<total_amount<<endl;
+cout<<"Discount Price: "<<discount_price<<endl;
+cout<<"Amount Saved: "<<amount_saved;
+return 0;
+}
 ------------------------------------------------------------
+13))  student grade
 
-17)) #include <iostream>
+ #include <iostream>
+int main() {
+int marks;
+std::cin >> marks;
+if (marks > 100 || marks < 0) {
+std::cout << "Invalid marks. Please enter a valid score between 0 and 100.";
+} else {
+if (marks >= 95) {
+std::cout << "Student Grade: A Grade\n";
+} else if (marks >= 80) {
+std::cout << "Student Grade: B Grade\n";
+} else if (marks >= 60) {
+std::cout << "Student Grade: C Grade\n";
+} else if (marks >= 50) {
+std::cout << "Student Grade: Just Pass\n";
+} else {
+std::cout << "Student Grade: Fail\n";
+}
+}
+return 0;
+}
+----------------------------------------------------------
+14))  base class (circle,rectangle,triangle)
+
+
+#include <iostream>
+// Abstract base class Shape
+class Shape {
+public:
+virtual float calculateArea() const = 0;
+virtual void display() const = 0;
+virtual ~Shape() {}
+};
+
+class Circle : public Shape {
+private:
+float radius;
+public:
+Circle(float r) : radius(r) {}
+float calculateArea() const override {
+return 3.14159f * radius * radius;
+}
+void display() const override {
+std::cout << "Circle Area: " << calculateArea() << std::endl;
+}
+};
+
+class Rectangle : public Shape {
+private:
+float length, width;
+public:
+Rectangle(float l, float w) : length(l), width(w) {}
+float calculateArea() const override {
+return length * width;
+}
+void display() const override {
+std::cout << "Rectangle Area: " << calculateArea() << std::endl;
+}
+};
+
+class Triangle : public Shape {
+private:
+float base, height;
+public:
+Triangle(float b, float h) : base(b), height(h) {}
+float calculateArea() const override {
+return 0.5f * base * height;
+}
+void display() const override {
+std::cout << "Triangle Area: " << calculateArea() << std::endl;
+}
+};
+int main() {
+float radius, length, width, base, height;
+
+std::cin >> radius;
+Circle circle(radius);
+std::cin >> length >> width;
+Rectangle rectangle(length, width);
+std::cin >> base >> height;
+Triangle triangle(base, height);
+Shape* shapes[3] = {&circle, &rectangle, &triangle};
+for (int i = 0; i < 3; ++i) {
+shapes[i]->display();
+}
+return 0;
+}
+------------------------------------
+15)) numbers from 1 to n 
+
+#include <iostream>
+int calculateSum(int N) {
+int sum = 0;
+for (int i = 1; i <= N; i++) {
+sum += i;
+}
+return sum;
+}
+int main() {
+int N;
+std::cin >> N;
+int result = calculateSum(N);
+std::cout << "The sum of all numbers from 1 to " << N << " is: " << result;
+return 0;
+}
+----------------------------------------
+16))#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+
+    ofstream outputFile("example.txt");
+    if (!outputFile.is_open()) {
+        cerr << "Unable to open the file." << endl;
+        return 1;
+    }
+    string str;
+    cout << "Enter a string: ";
+    getline(cin, str);
+    outputFile << str;
+    outputFile.close();
+    ifstream inputFile("example.txt");
+    if (!inputFile.is_open()) {
+        cerr << "Unable to open the file." << endl;
+        return 1;
+    }
+
+    int charCount = 0;
+    char ch;
+    while (inputFile.get(ch)) {
+        charCount++;
+    }
+    inputFile.close();
+    cout << "Number of characters in the file: " << charCount << endl;
+
+    return 0;
+}
+
+-----------------------------------------------
+17))  swapping numbers
+
+ #include <iostream>
+using namespace std;
+void swapUsingPointers(int* ptr1, int* ptr2) {
+int temp = *ptr1;
+*ptr1 = *ptr2;
+*ptr2 = temp;
+}
+int main() {
+int num1, num2;
+cin >> num1;
+cin >> num2;
+cout << "Before swapping:" << endl;
+cout << "First number: " << num1 << endl;
+cout << "Second number: " << num2 << endl;
+swapUsingPointers(&num1, &num2);
+cout << "After swapping:" << endl;
+cout << "First number: " << num1 << endl;
+cout << "Second number: " << num2 << endl;
+return 0;
+}
+----------------------------------------------------------
+18)) palindrome
+
+#include <iostream>
+#include <string>
+int main() {
+std::string input;
+
+std::cin >> input;
+bool isPalindrome = true;
+for (int i = 0; i < input.length() / 2; i++) {
+if (input[i] != input[input.length() - i - 1]) {
+isPalindrome = false;
+break;
+}}
+if (isPalindrome) {
+std::cout << "The string is a palindrome" << std::endl;
+} else {
+std::cout << "The string is not a palindrome" << std::endl;
+}
+return 0;
+}
+---------------------------------------------------
+19))  findpos
+
+#include<iostream>
+using namespace std;
+int findPos(int pos)
+{
+static int x=1;
+x=x*2;
+if(pos>x)
+{
+return findPos(pos);
+}
+if(pos==x){return x;}
+return x/2;
+}
+int main()
+{
+int num;
+cin>>num;
+cout<<findPos(num);
+
+return 0;
+}
+--------------------------------------
+20) banking apllication
+
+ #include <iostream>
 class Account {
 public:
 virtual void deposit(double amount) = 0;
@@ -535,90 +638,4 @@ savings.withdraw(withdrawAmount);
 std::cout << "Balance after withdrawal: " << savings.getBalance() << std::endl;
 return 0;
 }
-
-------------------------------------------------------------
-
-18)) #include<iostream>
-using namespace std;
-class myClass{
-private:
-int n;
-public:
-myClass(int n){
-this -> n = n;
-}
-friend int operator+(myClass &mc1 , myClass &mc2);
-friend int operator-(myClass &mc1, myClass &mc2);
-};
-int operator+(myClass &mc1, myClass &mc2){
-return mc1.n + mc2.n;
-}
-int operator-(myClass &mc1, myClass &mc2){
-return mc1.n - mc2.n;
-}
-int main(){
-int a,b,sum,diff;
-cin >> a >> b;
-
-myClass obj1(a);
-myClass obj2(b);
-
-sum = obj1 + obj2;
-diff = obj1 - obj2;
-
-cout << "Sum = " << sum<<"\n";
-cout << "Difference = " << diff;
-}
-
------------------------------------------------------------------
-
-19)) #include<iostream>
-#include <vector>
-int main () {
-std::vector<int> numbers;
-int num;
-while (true) {
-std::cin >> num;
-if (num < 0) {
-break;
-}
-numbers.push_back(num);
-}
-if (!numbers.empty()) {
-int sum = 0;
-for (int n : numbers) {
-sum += n;
-}
-double average = static_cast<double>(sum) / numbers.size();
-std::cout << "Sum: " << sum << std::endl;
-std::cout << "Average: " << average << std::endl;
-} else {
-std::cout << "No positive integers entered." << std::endl;
-}
-return 0;
-}
-
--------------------------------------------------------------------------
-
-20)) #include <iostream>
-#include <vector>
-template <typename Iterator>
-int accumulate(Iterator begin, Iterator end) {
-using ValueType = typename std::iterator_traits<Iterator>::value_type;
-ValueType sum = ValueType(); // Initialize sum with the default value
-for (Iterator it = begin; it != end; ++it) {
-sum += *it;
-}
-return sum;
-}
-int main() {
-int n;
-std::cin >> n;
-std::vector<int> vec(n);
-for (int i = 0; i < n; ++i) {
-std::cin >> vec[i];
-}
-auto sum = accumulate(vec.begin(), vec.end());
-std::cout << "Accumulated sum: " << sum << std::endl;
-return 0;
-}
+------------------------------------------
